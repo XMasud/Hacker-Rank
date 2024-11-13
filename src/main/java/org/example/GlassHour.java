@@ -1,10 +1,9 @@
 package org.example;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class TwoDArray {
+public class GlassHour {
 
     public static int hourglassSum(List<List<Integer>> arr) {
 
@@ -17,19 +16,15 @@ public class TwoDArray {
                 int secondRow = arr.get(i+1).get(j+1);
                 int thirdRow = arr.get(i+2).get(j) + arr.get(i+2).get(j+1) + arr.get(i+2).get(j+2);
 
-                System.out.print(" ");
-
-                System.out.print(max);
                 if(max < firstRow+secondRow+thirdRow)
                     max = firstRow+secondRow+thirdRow;
             }
-            System.out.println("");
-
         }
         return max;
     }
 
     public static void main(String[] args) {
+
         List<List<Integer>> arr = Arrays.asList(
                 Arrays.asList(-1, -1, 0, -9, -2, -2),
                 Arrays.asList(-2, -1, -6, -8, -2, -5),
