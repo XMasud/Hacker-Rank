@@ -6,15 +6,20 @@ import java.util.List;
 public class LeftRotation {
     public static List<Integer> rotateLeft(int d, List<Integer> arr) {
 
-        for (int i = 0; i < d; i++) {
-            int temp = arr.get(0);
-            for (int j = 1; j < arr.size(); j++) {
-                arr.set(j-1, arr.get(j));
-            }
-            arr.set(arr.size()-1, temp);
+        List<Integer> result = new ArrayList<>();
+        int index = d;
+
+        while (index < arr.size()){
+            result.add(arr.get(index));
+            index++;
         }
 
-        return arr;
+        index = 0;
+        while (index < d){
+            result.add(arr.get(index));
+            index++;
+        }
+        return result;
     }
 
     public static void main(String[] args) {
